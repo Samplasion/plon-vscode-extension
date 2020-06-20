@@ -3,6 +3,7 @@
     "displayName": "Plon Lang",
     "description": "Enables syntax highlighting for Plon files and Grammar notation files. Additionally, it provides snippets for Plon files.",
     "version": "0.0.1",
+    "icon": "icon.png",
     "engines": {
         "vscode": "^1.46.0"
     },
@@ -43,5 +44,8 @@
                 "path": "./snippets.json"
             }
         ]
+    },
+    "repository": {
+        "url": "https://github.com/Samplasion/plon-vscode-extension.git"
     }
 }

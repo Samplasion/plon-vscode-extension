@@ -31,8 +31,12 @@
                     "end": ">"
                 },
                 {
+                    "name": "entity.name.type",
+                    "match": "[A-Z][a-zA-Z]*"
+                },
+                {
                     "name": "entity.name",
-                    "match": "[a-zA-Z]+"
+                    "match": "[a-z][a-zA-Z]*"
                 },
                 {
                     "name": "comment.line",
