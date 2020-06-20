@@ -1,0 +1,77 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Plon",
+	"fileTypes": ["plon"],
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings-double"
+		},
+		{
+			"include": "#strings-single"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "comment.line.plon",
+					"match": "\/\/.*$"
+				},
+				{
+					"name": "comment.block.plon",
+					"comment": "(?m)\\/\\*(.*)*\\*\\/"
+				},
+				{
+					"name": "keyword.control.plon",
+					"match": "\\b(break|class|continue|else|false|for|function|if|no|null|or|print|repeat|return|static|super|then|this|throw|true|var|while)\\b"
+				},
+				{
+					"name": "constant.numeric.plon",
+					"match": "\\b[0-9](?:\\.|,)?[0-9]?\\b"
+				},
+				{
+					"name": "entity.name.class.plon",
+					"match": "\\b[A-Z_$€][a-zA-Z_$€]*\\b"
+				},
+				{
+					"name": "entity.name.function.plon",
+					"match": "[a-zA-Z_$€]+(?=\\(.*\\))"
+				},
+				{
+					"name": "keyword.operator.plon",
+					"match": "(?:\\+|-|\\*\\*?|\/|&&?|\\|\\|?|\\^\\^?|<<?|>>?|(?:<|>|=|!)=)"
+				},
+				{
+					"name": "variable.plon",
+					"match": "var +[a-zA-Z][a-zA-Z_$€]"
+				}
+			]
+		},
+		"strings-double": {
+			"name": "string.quoted.double.plon",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.plon",
+					"match": "\\\\."
+				}
+			]
+		},
+		"strings-single": {
+			"name": "string.quoted.single.plon",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.plon",
+					"match": "\\\\[^\\n]*"
+				}
+			]
+		}
+	},
+	"scopeName": "source.plon"
+}

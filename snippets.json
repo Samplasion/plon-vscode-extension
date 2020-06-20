@@ -1,0 +1,52 @@
+{
+	"While loop": {
+		"prefix": "while",
+		"body": [
+			"while ($1) {",
+            "\t$2\n",
+            "}"
+		],
+		"description": "A while loop."
+    },
+    "Variable declaration": {
+        "prefix": "var",
+		"body": [
+            "var $1 = $2;",
+            "$3"
+        ],
+        "description": "Declares a variable in the current scope."
+    },
+    "If statement": {
+        "prefix": "if",
+		"body": [
+            "if ($1) {",
+            "\t$2",
+            "}"
+        ],
+        "description": "An if statement."
+    },
+    "If/Else statement": {
+        "prefix": "ifelse",
+		"body": [
+            "if ($1) {",
+            "\t$2",
+            "} else {",
+            "\t$3",
+            "}"
+        ],
+        "description": "An if statement with an else statement."
+    },
+    "If/Else If/Else statement": {
+        "prefix": "ifelseif",
+		"body": [
+            "if ($1) {",
+            "\t$2",
+            "} else if ($3) {",
+            "\t$4",
+            "} else {",
+            "\t$5",
+            "}"
+        ],
+        "description": "An if statement with an else if statement and an else statement."
+    }
+}

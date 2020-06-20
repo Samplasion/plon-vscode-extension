@@ -1,0 +1,45 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Plon",
+    "fileTypes": ["plon"],
+    "patterns": [
+        {
+            "include": "#statement"
+        }
+    ],
+    "repository": {
+        "statement": {
+            "patterns": [
+                {
+                    "name": "keyword.operator",
+                    "match": "\\b(?:\\.\\.\\.|\\+|\\*|\\||\\(|\\)|\\?|→)\\b"
+                },
+                {
+                    "name": "string",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.plon",
+                            "match": "\\\\."
+                        }
+                    ]
+                },
+                {
+                    "name": "meta",
+                    "begin": "<",
+                    "end": ">"
+                },
+                {
+                    "name": "entity.name",
+                    "match": "[a-zA-Z]+"
+                },
+                {
+                    "name": "comment.line",
+                    "match": "#.*$"
+                }
+            ]
+        }
+    },
+    "scopeName": "text.grammar"
+}

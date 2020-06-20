@@ -1,0 +1,47 @@
+{
+    "name": "plon-lang",
+    "displayName": "Plon Lang",
+    "description": "Enables syntax highlighting for Plon files and Grammar notation files. Additionally, it provides snippets for Plon files.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.46.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "plon",
+                "aliases": ["Plon", "plon"],
+                "extensions": [".plon"],
+                "configuration": "./plon.language-configuration.json"
+            },
+            {
+                "id": "grammar",
+                "aliases": ["Grammar", "grammar"],
+                "extensions": [".grammar"],
+                "comment": "./grammar.language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "plon",
+                "scopeName": "source.plon",
+                "path": "./syntaxes/plon.tmLanguage.json"
+            },
+            {
+                "language": "grammar",
+                "scopeName": "text.grammar",
+                "path": "./syntaxes/grammar.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "plon",
+                "path": "./snippets.json"
+            }
+        ]
+    }
+}
