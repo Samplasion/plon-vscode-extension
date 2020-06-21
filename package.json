@@ -2,7 +2,7 @@
     "name": "plon-lang",
     "displayName": "Plon Lang",
     "description": "Enables syntax highlighting for Plon files and Grammar notation files. Additionally, it provides snippets for Plon files.",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "icon": "icon.png",
     "engines": {
         "vscode": "^1.46.0"
@@ -11,6 +11,12 @@
         "Programming Languages",
         "Snippets"
     ],
+    "author": {
+        "name": "Samplasion",
+        "email": "dev@samplasion.js.org",
+        "url": "https://samplasion.js.org"
+    },
+    "publisher": "Samplasion",
     "contributes": {
         "languages": [
             {

@@ -1,10 +1,10 @@
 # Plon Lang extension for VSCode
 
-This is the README for your extension "plon-lang". After writing up a brief description, we recommend including the following sections.
+Enables syntax highlighting for Plon files and Grammar notation files. Additionally, it provides snippets for Plon files.
 
 ## Features
 
-Enables syntax highlighting for Plon files and Grammar notation files. Additionally, it provides snippets for Plon files.
+This extension adds syntax highlighting to .plon files.
 
 ## Known Issues
 
