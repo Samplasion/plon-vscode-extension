@@ -1,14 +1,19 @@
-# Change Log
-
-All notable changes to the "plon-lang" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+# Changelog
 
 ## [Unreleased]
 
-## [1.0]
-- Initial release
+## [1.0.1]
+
 ### Added
+
+- Tentative approach at syntax highlighting inside Markdown code blocks.
+
+## [1.0.0]
+
+- Initial release
+
+### Added
+
 - Plon grammar definitions.
 - Plon snippets.
 - Grammar grammar definitions.

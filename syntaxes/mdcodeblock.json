@@ -1,0 +1,42 @@
+{
+	"fileTypes": [],
+	"injectionSelector": "L:text.html.markdown",
+	"patterns": [
+		{
+			"include": "#julia-code-block"
+		}
+	],
+	"repository": {
+		"julia-code-block": {
+			"begin": "^\\s*(\\`{3,}|~{3,})\\s*(plon)(\\s*([^`~]*))?$",
+			"name": "markup.fenced_code.block.markdown",
+			"end": "^\\s*(\\`{3,}|~{3,})\\s*$",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.definition.markdown"
+				},
+				"2": {
+					"name": "fenced_code.block.language"
+				}
+			},
+			"endCaptures": {
+				"1": {
+					"name": "punctuation.definition.markdown"
+				}
+			},
+			"patterns": [
+				{
+					"begin": "(^|\\G)(\\s*)(.*)",
+					"while": "(^|\\G)(?!\\s*([`~]{3,})\\s*$)",
+					"contentName": "meta.embedded.block.plon",
+					"patterns": [
+						{
+							"include": "source.plon"
+						}
+					]
+				}
+			]
+		}
+	},
+	"scopeName": "markdown.julia.codeblock"
+}

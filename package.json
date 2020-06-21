@@ -2,7 +2,7 @@
     "name": "plon-lang",
     "displayName": "Plon Lang",
     "description": "Enables syntax highlighting for Plon files and Grammar notation files. Additionally, it provides snippets for Plon files.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "icon": "icon.png",
     "engines": {
         "vscode": "^1.46.0"
@@ -42,6 +42,16 @@
                 "language": "grammar",
                 "scopeName": "text.grammar",
                 "path": "./syntaxes/grammar.tmLanguage.json"
+            },
+            {
+                "scopeName": "markdown.plon.codeblock",
+                "path": "./syntaxes/mdcodeblock.json",
+                "injectTo": [
+                    "text.html.markdown"
+                ],
+                "embeddedLanguages": {
+                    "meta.embedded.block.julia": "plon"
+                }
             }
         ],
         "snippets": [
